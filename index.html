@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!------- link css file ------->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <script>
+        function check() {
+            x = document.getElementById("username").value;
+            y = document.getElementById("password").value;
+            document.getElementById("d1").innerHTML = "";
+            document.getElementById("d2").innerHTML = "";
+            if (x == "") {
+                document.getElementById("d1").innerHTML = "Please enter your user Id";
+                return false;
+            }
+            if (y == "") {
+                document.getElementById("d2").innerHTML = "Please enter your Password";
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form name="frm1" onsubmit="return check()" action="cart.html">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <span id="d1">
+
+            </span>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="d2">
+
+            </span>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/popover.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+</body>
+
+</html>
